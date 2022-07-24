@@ -51,7 +51,7 @@ List<String> verses=[];
 
 void loadFile(int index)async {
     String content= await rootBundle.loadString('assets/files/${index+1}.txt');
-    List<String>lines= content.split("\n");
+    List<String>lines= content.trim().split("\n");
     verses=lines;
     setState(() {
 
